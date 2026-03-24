@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+users.db
+.env
+# Data files
+*.csv
+
+# Model files
+*.pkl
+*.h5
