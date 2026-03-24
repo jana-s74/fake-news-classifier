@@ -50,7 +50,7 @@ def train():
     # Save the files
     joblib.dump(model, 'news_model.pkl')
     joblib.dump(vectorizer, 'vectorizer.pkl')
-    print("✅ Success: 'news_model.pkl' and 'vectorizer.pkl' created.")
+    print("Success: 'news_model.pkl' and 'vectorizer.pkl' created.")
 
 if __name__ == "__main__":
     train()

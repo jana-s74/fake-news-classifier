@@ -7,5 +7,4 @@ users.db
 *.csv
 
 # Model files
-*.pkl
 *.h5

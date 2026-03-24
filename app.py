@@ -103,8 +103,11 @@ def load_assets():
     global model, vectorizer
     if model is None or vectorizer is None:
         try:
-            model = joblib.load('news_model.pkl')
-            vectorizer = joblib.load('vectorizer.pkl')
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            model_path = os.path.join(base_dir, 'news_model.pkl')
+            vec_path = os.path.join(base_dir, 'vectorizer.pkl')
+            model = joblib.load(model_path)
+            vectorizer = joblib.load(vec_path)
         except FileNotFoundError:
             st.error("Model files missing. Run train_model.py first!")
             st.stop()
